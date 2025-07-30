@@ -1,0 +1,41 @@
+@API_URL = http://localhost:5003
+@TOKEN = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTc1MzU2Mzc2MSwiZXhwIjoxNzU0MTY4NTYxfQ.qaNH_G3gD7FDFXf6xbODYnbE6dCAxCAinS5qKOgNpYU
+
+### Create Blog (Authenticated)
+POST {{API_URL}}/api/blogs
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "title": "My First Blog",
+  "content": "This is the content of my first blog."
+}
+
+###
+
+### Get All Blogs (Public)
+GET {{API_URL}}/api/blogs
+Authorization: Bearer {{TOKEN}}
+
+###
+
+### Get Blog by ID
+GET {{API_URL}}/api/blogs/1
+
+###
+
+### Update Blog (Authenticated)
+PUT {{API_URL}}/api/blogs/2
+Content-Type: application/json
+Authorization: Bearer {{TOKEN}}
+
+{
+  "title": "Updated Title 2",
+  "content": "Updated blog content."
+}
+
+###
+
+### Delete Blog (Authenticated)
+DELETE {{API_URL}}/api/blogs/1
+Authorization: Bearer {{TOKEN}}
