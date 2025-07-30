@@ -3,7 +3,10 @@ import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { prisma } from '@repo/database'; // Adjust the import path as necessary
 
-const JWT_SECRET = process.env.JWT_SECRET as string | undefined;
+const JWT_SECRET = "wewwew"
+console.log('JWT_SECRET from contr:', JWT_SECRET);
+
+
 
 export const register = async (req: Request, res: Response) => {
   const { name, email, password } = req.body;

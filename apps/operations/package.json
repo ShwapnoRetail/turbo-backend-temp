@@ -2,8 +2,11 @@
     "name": "operations",
     "version": "1.0.0",
     "scripts": {
-         "build": "tsc",
-        "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
+        "start": "node dist/index.js",
+        "dev": "tsup --watch --onSuccess \"node dist/index.cjs\"",
+        "build": "tsup",
+        "check-types": "tsc --noEmit",
+        "lint": "eslint src/ --max-warnings 0"
     },
     "keywords": [],
     "author": "",
@@ -20,13 +23,10 @@
         "@repo/eslint-config": "*",
         "@repo/typescript-config": "*",
         "@types/bcrypt": "^6.0.0",
-        "@repo/middlewares-auth": "*",
         "@types/express": "^5.0.3",
         "@types/jsonwebtoken": "^9.0.10",
         "@types/node": "^24.1.0",
-        "nodemon": "^3.1.10",
-        "ts-node": "^10.9.2",
-        "ts-node-dev": "^2.0.0",
-        "typescript": "^5.8.3"
+        "typescript": "^5.8.3",
+        "tsup": "^8.5.0"
     }
 }
