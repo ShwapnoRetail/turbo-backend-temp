@@ -6,7 +6,6 @@ import {
   updateBlog,
   deleteBlog,
 } from './blog.controller';
-
 import { authenticate } from '@repo/middlewares-auth'; // Adjust the import path as necessary
 
 
