@@ -16,7 +16,7 @@
         "build": {
           "dependsOn": ["^build", "^db:generate"],
           "inputs": ["$TURBO_DEFAULT$", ".env*"],
-          "outputs": ["dist/**", "!.turbo/**"], 
+          "outputs": ["dist/**", "!.turbo/**", ".next/**", "!.next/cache/**"], 
           "env": ["DATABASE_URL"]
         },
         "lint": {
