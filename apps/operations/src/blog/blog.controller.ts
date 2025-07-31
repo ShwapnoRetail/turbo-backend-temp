@@ -1,5 +1,5 @@
 import { Response, Request } from 'express';
-import { prisma } from '@repo/database'; // Adjust the import path as necessary
+import { prisma } from '@repo/db'; // Adjust the import path as necessary
 
 
 export const createBlog = async (req: Request, res: Response) => {

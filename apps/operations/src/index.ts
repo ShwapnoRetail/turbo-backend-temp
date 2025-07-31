@@ -1,5 +1,5 @@
 import express from 'express';
-import blogRoutes from './blog/blog.routes';
+import blogRoutes from './blog/blog.routes'; // Adjust the import path as necessary
 
 //dotenv config
 import dotenv from 'dotenv';

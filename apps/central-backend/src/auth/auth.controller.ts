@@ -1,10 +1,9 @@
 import { Request, Response } from 'express';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import { prisma } from '@repo/database'; // Adjust the import path as necessary
+import { prisma } from '@repo/db'; // Adjust the import path as necessary
 
-const JWT_SECRET = "wewwew"
-console.log('JWT_SECRET from contr:', JWT_SECRET);
+const JWT_SECRET = process.env.JWT_SECRET;
 
 
 
